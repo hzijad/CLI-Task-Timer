@@ -64,6 +64,6 @@ The `AllTimers` class is a manager for multiple `TaskTimer` instances, enabling 
   
 ## About Us
 
-*To be filled in later.*
+Created by 3 ambitious students full of enthusiasm and ambition towards programming, with much love.
 
 ---
