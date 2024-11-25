@@ -10,11 +10,11 @@ class taskTimer{
 
     start(){
         this.updatedAt = Date.now()
-        this.actionList.concat([{action:"started",date:Date.now()}])
+        this.actionList.push([{action:"started",date:Date.now()}])
     }
     pause(){
         this.updatedAt = Date.now()
-        this.actionList.concat([{action:"paused",date:Date.now()}])
+        this.actionList.push([{action:"paused",date:Date.now()}])
     }
     reset(){
         this.updatedAt=Date.now();
@@ -41,26 +41,53 @@ class AllTimers{
 
         this.timerList={}
     }
-    createTimer(name){
-        this.timerList[name]=new taskTimer(name)
+    createTimer(name) {
+        if (this.timerList[name]) {
+            throw new Error(`Timer with name "${name}" already exists.`);
+        }
+        this.timerList[name] = new taskTimer(name);
     }
-    startTimer(name){
+
+    startTimer(name) {
+        if (!this.timerList[name]) {
+            throw new Error(`Timer with name "${name}" does not exist.`);
+        }
         this.timerList[name].start();
     }
-    pauseTimer(name){
-        this.timerList[name].pause()
+
+    pauseTimer(name) {
+        if (!this.timerList[name]) {
+            throw new Error(`Timer with name "${name}" does not exist.`);
+        }
+        this.timerList[name].pause();
     }
-    resetTimer(name){
-        this.timerList[name].reset()
+
+    resetTimer(name) {
+        if (!this.timerList[name]) {
+            throw new Error(`Timer with name "${name}" does not exist.`);
+        }
+        this.timerList[name].reset();
     }
-    getStatusTimer(name){
-        return this.timerList[name].getStatus()
+
+    getStatusTimer(name) {
+        if (!this.timerList[name]) {
+            throw new Error(`Timer with name "${name}" does not exist.`);
+        }
+        return this.timerList[name].getStatus();
     }
-    getElapsedTimeTimer(name){
-        return this.timerList[name].getElapsedTime()
+
+    getElapsedTimeTimer(name) {
+        if (!this.timerList[name]) {
+            throw new Error(`Timer with name "${name}" does not exist.`);
+        }
+        return this.timerList[name].getElapsedTime();
     }
-    getUidTimer(name){
-        return this.timerList[name].getUid()
+
+    getUidTimer(name) {
+        if (!this.timerList[name]) {
+            throw new Error(`Timer with name "${name}" does not exist.`);
+        }
+        return this.timerList[name].getUid();
     }
 }
 
