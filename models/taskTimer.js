@@ -10,11 +10,11 @@ class taskTimer{
 
     start(){
         this.updatedAt = Date.now()
-        this.actionList.push([{action:"started",date:Date.now()}])
+        this.actionList.push({action:"started",date:Date.now()})
     }
     pause(){
         this.updatedAt = Date.now()
-        this.actionList.push([{action:"paused",date:Date.now()}])
+        this.actionList.push({action:"paused",date:Date.now()})
     }
     reset(){
         this.updatedAt=Date.now();
@@ -88,6 +88,14 @@ class AllTimers{
             throw new Error(`Timer with name "${name}" does not exist.`);
         }
         return this.timerList[name].getUid();
+    }
+
+    showAllTimers(){
+        let allTimerList=[]
+        for(const [key] of Object.entries(this.timerList)){
+            allTimerList.push(" "+key)
+        }
+        return allTimerList;
     }
 }
 

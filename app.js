@@ -6,6 +6,7 @@ const AllTimers=require("./models/taskTimer.js")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const timerRequestsRouter=require('./routes/timerRequests')
 
 var app = express();
 
@@ -17,14 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-const a =new AllTimers()
-a.createTimer("first")
-a.startTimer("first")
-a.pauseTimer("first")
-console.log(a.getStatusTimer("first"))
-
-console.log("AAAA")
-
+app.use('/timerRequests', timerRequestsRouter)
 
 module.exports = app;
