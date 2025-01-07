@@ -57,6 +57,7 @@ The `AllTimers` class is a manager for multiple `TaskTimer` instances, enabling 
 ## Technology Used
 
 - **Frontend**: React, for an interactive and dynamic user interface.
+  A step by step guide on how to run the frontend can be found in the following repository: https://github.com/hasagi33/task_react
 - **Backend**:
   - **JavaScript**: Node.js for the JavaScript version of the CLI Task Timer.
   - **C#**: .NET for the C# version, handling CLI commands within the application.
