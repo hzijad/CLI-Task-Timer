@@ -1,0 +1,128 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #1c1f24; /* Darker background color */
+  color: white;
+  position: relative;
+  padding-top: 20px; /* Added padding to the top */
+}
+
+.top-center-text {
+  text-align: center;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 10px; /* Move to the very top */
+}
+
+.course-code {
+  font-size: 18px; /* Slightly smaller font size */
+  font-weight: bold;
+}
+
+.names {
+  font-size: 14px; /* Slightly smaller font size */
+}
+
+.top-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: #282c34;
+  border: 2px solid white; /* Added border */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Selected button style */
+.top-button.selected {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow for selected button */
+  background-color: #4CAF50;  /* Change background color for selected button */
+  border: 2px solid #4CAF50;  /* Optionally, change border color */
+}
+
+.title {
+  font-size: 32px; /* Increased font size */
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.project-description .description {
+  margin-top: 10px;
+  font-size: 14px;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px; /* Added space below the description */
+}
+
+.language-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.language-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chatboxes {
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  max-width: 1000px; /* Increased max-width */
+}
+
+.left-chatbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.left-chatbox textarea {
+  height: 400px; /* Increased height */
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2c2f34; /* Darker background color for textareas */
+  color: white; /* White text color for better contrast */
+}
+
+.left-chatbox .send-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #282c34;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+/* .chatboxes textarea {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2c2f34;
+  color: white;
+} */
+
+.top-right-corner {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+}
