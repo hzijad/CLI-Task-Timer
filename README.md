@@ -61,7 +61,11 @@ The `AllTimers` class is a manager for multiple `TaskTimer` instances, enabling 
   - **JavaScript**: Node.js for the JavaScript version of the CLI Task Timer.
   - **C#**: .NET for the C# version, handling CLI commands within the application.
   - **Python**: Flask for the Python version of the CLI, providing a robust framework for backend logic.
-  
+    
+For a step by step guide on how to build and run the backend for a specific language, follow the README.md file from the repositories bellow:
+- **JavaScript**: https://github.com/hasagi33/CLI_Task_JS
+- **C#**: https://github.com/hasagi33/CLI_Task_Cs
+- **Python**: https://github.com/hasagi33/CLI_Task_Py
 ## About Us
 
 Created by a team of 3 students to showcase differences between different programming languages and architectures.
